@@ -1,0 +1,314 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background: #cbb8a9;
+    width: 100vw;
+    font-family: 'DM Mono', monospace;
+}
+
+
+
+#container{
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "beneficios"
+        "diferenca" 
+        "diferencaIMG" 
+        "melhorQualidade"
+        "melhorQualidadeIMG"
+        "melhorParaVoce"
+        "melhorParaVoceIMG"
+        "rodape"
+    ;
+    
+}
+
+button{
+    cursor: pointer;
+}
+
+header{
+    background: rgb(255, 255, 255);
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3vw;
+    height: 10vh;
+}
+
+.menu-aberto{
+    position: absolute;
+    top: 10vh;
+    right: 0vw;
+    width: 50vw;
+    height: 30vh;
+    background: #cbb8a9;
+}
+
+.menu-fechado{
+    display: none;
+   
+}
+
+
+.menu ul li a{
+    display: inline-block;
+    width: 100%;
+    font-size: 20px;
+    padding: 1vh 1vw;
+    text-align: center;
+    color: rgb(66, 66, 66);
+    background: rgb(241, 229, 215);
+    margin: 2px;
+
+}
+
+
+    
+
+main{
+    background: #ceb8ab url(./imagens/produtos-skin-case-png.png) no-repeat center left;
+    background-size: cover;
+    height: 50vh;
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0 5vw;
+    text-align: center;
+
+}
+
+main button{
+    color: white;
+}
+
+.section-mobile{
+    background: rgba(0, 0, 0, 0.404);
+}
+
+.botoes{
+    background: none;
+    border: .5px solid rgb(97, 97, 97);
+    padding: .5vh 2vw;
+    height: 3.5vh;
+    margin: 5vh;
+    border-radius: 3.5vh;
+}
+
+#beneficios{
+    background: #ffffff;
+    grid-area: beneficios;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5vh 2.5vw;
+}
+
+#beneficios section{
+    margin: 2vh 0 ;
+}
+
+.beneficios-img{
+    width: 30px;
+}
+
+.beneficio1 h3, .beneficio2 h3, .beneficio3 h3{
+    margin: 1vh 0;
+}
+
+#diferenca{
+    background: #cba9a8;
+    grid-area: diferenca;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 2vh;
+}
+
+#diferenca section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.paragrafo{
+    width: 70vw;
+}
+
+.diferencaIMG{
+    grid-area: diferencaIMG;
+    width: 100%;
+    
+}
+
+#melhor-qualidade{
+    background: #bacba9;
+    grid-area: melhorQualidade;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 2vh;
+}
+
+#melhor-qualidade section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#melhor-qualidadeIMG{
+    grid-area: melhorQualidadeIMG;
+}
+
+
+
+#melhor-para-voce{
+    background: #baa9cb;
+    grid-area: melhorParaVoce;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 2vh;
+}
+
+#melhor-para-voce section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer{
+    background: #ffffff;
+    grid-area: rodape;
+    margin-top: -1vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer a{
+    color: black;
+    font-weight: 800;
+}
+
+
+
+ @media screen and (min-width:1105px) {
+   
+    #container{
+            display: grid;
+            grid-template-columns:100vw ;
+            grid-template-rows: 10vh 50vh 50vh 45vh 45vh 45vh 5vh ;
+            grid-template-areas: 
+                "header "
+                "main "
+                "beneficios "
+                "diferenca "
+                "melhorQualidade "
+                "melhorParaVoce "
+                "rodape "
+            ;
+            
+        }
+
+    header{
+        background: rgb(255, 255, 255);
+        grid-area: header;
+    }
+
+    .btn-menu{
+        display: none;
+    }
+
+    .menu ul {
+        position: static;
+    }
+
+    .menu ul li{
+        display: inline-block;
+    }
+    
+    .menu ul li a{
+        display: inline-block;
+        width: 10vw;
+        background: none;
+    }
+    
+    .menu-fechado{
+        display: block;
+    }
+
+
+    
+
+
+header{
+    grid-area: header;
+}
+main{
+    grid-area: main;
+}
+#beneficios{
+    grid-area: beneficios;
+}
+
+
+.diferencaIMG{
+    height: 100%;
+    margin:0;
+    padding: 0;
+}
+
+
+.paragrafo{
+    width: 40vw;
+}
+
+#diferenca section{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+
+
+#melhor-qualidade section{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+
+}
+
+
+#melhor-para-voce section{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+ 
+ }
+
+
+ @media screen and (min-width:1350px) {
+
+ }
